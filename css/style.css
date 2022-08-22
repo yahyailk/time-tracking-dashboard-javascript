@@ -1,0 +1,228 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+  scroll-behavior: smooth;
+  list-style-type: none;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(226deg, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#content {
+  height: 52rem;
+  display: flex;
+  flex-direction: row;
+}
+#content #header {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 1.5rem;
+  height: 100%;
+  overflow: hidden;
+  width: 28rem;
+}
+#content #header #profile {
+  background-color: hsl(246deg, 80%, 60%);
+  padding: 3.5rem;
+  border-radius: 1.5rem;
+}
+#content #header #profile img {
+  width: 9rem;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-bottom: 3rem;
+}
+#content #header #profile #info p {
+  font-size: 1.8rem;
+}
+#content #header #profile #info p:nth-child(1) {
+  color: hsl(236deg, 100%, 87%);
+}
+#content #header #profile #info p:nth-child(2) {
+  color: #fff;
+  font-size: 4rem;
+  font-weight: 300;
+  margin-bottom: 4.5rem;
+}
+#content #header #times {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 1.8rem;
+  padding: 1.5rem 3.5rem;
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
+#content #header #times p {
+  margin-bottom: 1.5rem;
+  color: hsl(236deg, 100%, 87%);
+  font-weight: 300;
+  cursor: pointer;
+}
+#content #header #times p:hover {
+  color: #fff;
+}
+#content #cards {
+  height: 52rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 2rem;
+  gap: 3rem;
+}
+#content #cards #card-1 {
+  background-color: hsl(15deg, 100%, 70%);
+}
+#content #cards #card-2 {
+  background-color: hsl(195deg, 74%, 62%);
+}
+#content #cards #card-3 {
+  background-color: hsl(348deg, 100%, 68%);
+}
+#content #cards #card-4 {
+  background-color: hsl(145deg, 58%, 55%);
+}
+#content #cards #card-5 {
+  background-color: hsl(264deg, 64%, 52%);
+}
+#content #cards #card-6 {
+  background-color: hsl(43deg, 84%, 65%);
+}
+#content #cards .card {
+  width: 24rem;
+  height: 24rem;
+  border-radius: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+#content #cards .card .backgroun-icon {
+  position: absolute;
+  top: -1rem;
+  right: 2rem;
+  z-index: 0;
+}
+#content #cards .card .card-content {
+  position: relative;
+  margin-top: 5rem;
+  background-color: hsl(235deg, 46%, 20%);
+  height: 100%;
+  border-radius: 1.5rem;
+  padding: 3rem;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+#content #cards .card .card-content:hover {
+  background-color: #292f70;
+}
+#content #cards .card .card-content:hover .card-header p {
+  color: #fff;
+}
+#content #cards .card .card-content:hover .card-main p:nth-child(1) {
+  color: #fff;
+}
+#content #cards .card .card-content .card-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+#content #cards .card .card-content .card-header p {
+  color: hsl(236deg, 100%, 87%);
+}
+#content #cards .card .card-content .card-header img {
+  cursor: pointer;
+}
+#content #cards .card .card-content .card-main p {
+  color: hsl(236deg, 100%, 87%);
+}
+#content #cards .card .card-content .card-main p:nth-child(1) {
+  font-size: 5.5rem;
+  font-weight: 300;
+  margin-bottom: 0.4rem;
+}
+#content #cards .card .card-content .card-main p:nth-child(2) {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 576px) {
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  #content {
+    margin: 1rem 0rem;
+    height: 100%;
+    width: 35rem;
+    flex-direction: column;
+  }
+  #content #header {
+    height: 100%;
+    width: 35rem;
+  }
+  #content #header #profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  #content #header #profile img {
+    width: 9rem;
+  }
+  #content #header #profile #info p {
+    font-size: 1.6rem;
+  }
+  #content #header #profile #info p:nth-child(2) {
+    font-size: 2.6rem;
+    margin-bottom: 2.5rem;
+  }
+  #content #header #times {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2rem 0rem;
+  }
+  #content #header #times p {
+    margin-bottom: 0rem;
+  }
+  #content #cards {
+    margin-top: 3rem;
+    height: 100%;
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 0rem;
+    gap: 3rem;
+    width: 100%;
+  }
+  #content #cards .card {
+    width: 35rem;
+    height: 20rem;
+  }
+  #content #cards .card .card-content .card-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #content #cards .card .card-content .card-main p:nth-child(1) {
+    font-size: 3.6rem;
+    margin-bottom: 0rem;
+  }
+  #content #cards .card .card-content .card-main p:nth-child(2) {
+    margin-bottom: 0.5rem;
+    align-self: flex-end;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
